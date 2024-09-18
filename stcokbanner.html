@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamless Continuous Scroll</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        /* Common banner styling */
+        .banner {
+            width: 100%;
+            overflow: hidden;
+            background-color: #000000;
+            padding: 10px 0;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .banner-content {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .box-item {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        /* Continuous animations for banners */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Apply animations */
+        .scroll-left {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 60s linear infinite;
+        }
+
+        .scroll-right {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-right 60s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- First banner (scroll left to right) -->
+    <div class="banner">
+        <div class="banner-content scroll-left">
+            <div class="box-item">Microsoft</div>
+            <div class="box-item">Apple</div>
+            <div class="box-item">Google</div>
+            <div class="box-item">Netflix</div>
+            <div class="box-item">Amazon</div>
+            <div class="box-item">Aramco</div>
+            <div class="box-item">NVIDIA</div>
+            <div class="box-item">Tesla</div>
+            <div class="box-item">Meta</div>
+            <div class="box-item">Reliance</div>
+            <div class="box-item">Adani</div>
+            <div class="box-item">HDFC</div>
+            <div class="box-item">Alibaba</div>
+            <div class="box-item">Samsung</div>
+            <div class="box-item">Visa</div>
+            <div class="box-item">TATA</div>
+            <div class="box-item">Nestle</div>
+            <div class="box-item">Johnson & Johnson</div>
+            <div class="box-item">JPMorgan Chase</div>
+
+            <!-- Duplicate items for continuous effect -->
+            <div class="box-item">Microsoft</div>
+            <div class="box-item">Apple</div>
+            <div class="box-item">Google</div>
+            <div class="box-item">Netflix</div>
+            <div class="box-item">Amazon</div>
+            <div class="box-item">Aramco</div>
+            <div class="box-item">NVIDIA</div>
+            <div class="box-item">Tesla</div>
+            <div class="box-item">Meta</div>
+            <div class="box-item">Reliance</div>
+            <div class="box-item">Adani</div>
+            <div class="box-item">HDFC</div>
+            <div class="box-item">Alibaba</div>
+            <div class="box-item">Samsung</div>
+            <div class="box-item">Visa</div>
+            <div class="box-item">TATA</div>
+            <div class="box-item">Nestle</div>
+            <div class="box-item">Johnson & Johnson</div>
+            <div class="box-item">JPMorgan Chase</div>
+        </div>
+    </div>
+
+    <!-- Second banner (scroll right to left) -->
+    <div class="banner">
+        <div class="banner-content scroll-right">
+            <div class="box-item">XAU/USD</div>
+            <div class="box-item">EUR/USD</div>
+            <div class="box-item">GBP/USD</div>
+            <div class="box-item">JPY/USD</div>
+            <div class="box-item">EUR/USD</div>
+            <div class="box-item">GBP/USD</div>
+            <div class="box-item">USD/JPY</div>
+            <div class="box-item">USD/CHF</div>
+            <div class="box-item">AUD/USD</div>
+            <div class="box-item">NZD/USD</div>
+            <div class="box-item">USD/CAD</div>
+            <div class="box-item">EUR/GBP</div>
+            <div class="box-item">EUR/JPY</div>
+            <div class="box-item">GBP/JPY</div>
+            <div class="box-item">EUR/CHF</div>
+            <div class="box-item">GBP/CHF</div>
+            <div class="box-item">AUD/CAD</div>
+            <div class="box-item">AUD/NZD</div>
+            <div class="box-item">EUR/AUD</div>
+            <div class="box-item">NZD/JPY</div>
+            <div class="box-item">USD/SGD</div>
+            <div class="box-item">EUR/CAD</div>
+            <div class="box-item">USD/HKD</div>
+            <div class="box-item">AUD/JPY</div>
+
+            <!-- Duplicate items for continuous effect -->
+            <div class="box-item">XAU/USD</div>
+            <div class="box-item">EUR/USD</div>
+            <div class="box-item">GBP/USD</div>
+            <div class="box-item">JPY/USD</div>
+            <div class="box-item">EUR/USD</div>
+            <div class="box-item">GBP/USD</div>
+            <div class="box-item">USD/JPY</div>
+            <div class="box-item">USD/CHF</div>
+            <div class="box-item">AUD/USD</div>
+            <div class="box-item">NZD/USD</div>
+            <div class="box-item">USD/CAD</div>
+            <div class="box-item">EUR/GBP</div>
+            <div class="box-item">EUR/JPY</div>
+            <div class="box-item">GBP/JPY</div>
+            <div class="box-item">EUR/CHF</div>
+            <div class="box-item">GBP/CHF</div>
+            <div class="box-item">AUD/CAD</div>
+            <div class="box-item">AUD/NZD</div>
+            <div class="box-item">EUR/AUD</div>
+            <div class="box-item">NZD/JPY</div>
+            <div class="box-item">USD/SGD</div>
+            <div class="box-item">EUR/CAD</div>
+            <div class="box-item">USD/HKD</div>
+            <div class="box-item">AUD/JPY</div>
+        </div>
+    </div>
+
+    <!-- Third banner (scroll left to right again) -->
+    <div class="banner">
+        <div class="banner-content scroll-left">
+            <div class="box-item">Dow Jones</div>
+            <div class="box-item">Nasdaq</div>
+            <div class="box-item">S&P 500</div>
+            <div class="box-item">Nifty 50</div>
+            <div class="box-item">Sensex</div>
+            <div class="box-item">BankNifty</div>
+            <div class="box-item">Shanghai Composite</div>
+            <div class="box-item">Nikkei 225</div>
+            <div class="box-item">S&P/TSX Composite</div>
+            <div class="box-item">FTSE 100</div>
+            <div class="box-item">DAX</div>
+            <div class="box-item">CAC 40</div>
+            <div class="box-item">ASX 200</div>
+
+            <!-- Duplicate items for continuous effect -->
+            <div class="box-item">Dow Jones</div>
+            <div class="box-item">Nasdaq</div>
+            <div class="box-item">S&P 500</div>
+            <div class="box-item">Nifty 50</div>
+            <div class="box-item">Sensex</div>
+            <div class="box-item">BankNifty</div>
+            <div class="box-item">Shanghai Composite</div>
+            <div class="box-item">Nikkei 225</div>
+            <div class="box-item">S&P/TSX Composite</div>
+            <div class="box-item">FTSE 100</div>
+            <div class="box-item">DAX</div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

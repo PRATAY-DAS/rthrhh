@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextBull Banner</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow: hidden; /* Prevent horizontal scroll */
+        }
+        .banner {
+            height: 2em; /* Adjusted to em units for better scaling */
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+            overflow: hidden; /* Ensure no overflow */
+}
+        .banner::before, .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px; /* Width of the fade */
+            z-index: 1; /* Ensure it appears on top of the scrolling text */
+        }
+        .banner::before {
+            left: 0;
+            background: linear-gradient(to right, black, transparent);
+        }
+        .banner::after {
+            right: 0;
+            background: linear-gradient(to left, black, transparent);
+        }
+        .text-wrapper {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            animation: moveText 45s linear infinite;
+        }
+        .text {
+            display: inline-block;
+            padding-right: 2em; /* Adjust for better spacing */
+            font-size: 1.5em; /* Ensure text is large enough */
+        }
+        .next {
+            color: white;
+        }
+        .bull {
+            color: rgb(0, 89, 255);
+        }
+        @keyframes moveText {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <div class="text-wrapper">
+            <!-- Repeat the text enough times to ensure seamless scrolling -->
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+ 
+            <div class="text"><span class="next">Next</span><span class="bull">Bull</span></div>
+            <!-- Duplicate the above block as many times as needed to cover the width -->
+        </div>
+    </div>
+
+</body>
+</html>
